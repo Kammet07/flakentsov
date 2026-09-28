@@ -3,7 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
+   
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +22,7 @@
 
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
     };
     
     nixos-hardware = {
@@ -33,10 +34,10 @@
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       debug = true;
 
-      systems = [ "x86_64-linux" ];
+      systems = [ "x86_64-linux" "aarch64-linux" ];
 
       imports = [
-        ./module
+#        ./modules
         ./hosts
 #        ./nix
       ];

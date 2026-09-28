@@ -12,7 +12,7 @@
       "sd_mod"
       "rtsx_pci_sdmmc"
     ];
-    initdr.kernelModles = [ ];
+    initrd.kernelModules = [ ];
     kernelModules = [ "kvm-amd" ];
     extraModulePackages = [ ];
   };
@@ -34,18 +34,19 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+
 
   hardware = {
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
     graphics.enable = true;
 
+    # TODO: fix nvidia
     nvidia = {
       open = true;
 
       prime = {
-        reverseSync.enable = true;
+        # NOT WORKING reverseSync.enable = true;
         
         amdgpuBusId = "PCI:66@0:0:0";
         nvidiaBusId = "PCI:64@0:0:0";

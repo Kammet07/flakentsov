@@ -3,18 +3,17 @@
     (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd
       common-cpu-amd-pstate
-      
+      common-gpu-nvidia
     ])
     
     ./hardware-configuration.nix
     
-    ../../modules/niri
+    ../../modules
   ];
 
-  
-  user.name = "kammet";
+  networking.hostName = "kammet-nixos-tuf";
 
-  users.users.${config.user.name} = {
+  users.users.kammet = {
     isNormalUser = true;
     useDefaultShell = true;
     extraGroups = [
@@ -25,4 +24,7 @@
       "disk"
     ];
   };
+
+  system.stateVersion = "26.05";
+
 }
