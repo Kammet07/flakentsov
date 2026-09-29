@@ -1,4 +1,6 @@
 { pkgs, ...}: {
+  nixpkgs.config.allowUnfree = true;
+
   home.packages = with pkgs; [
       # development
       python3
@@ -6,12 +8,10 @@
       nix-init
       nh
       gh
-      # TODO: allow unfree
-      # vscode
+      vscode
 
       # gui apps
-      # TODO: allow unfree
-      # spotify
+      spotify
       pcmanfm
       ffmpegthumbnailer # video thumbnails
       gimp
