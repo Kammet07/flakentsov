@@ -6,8 +6,11 @@
       nix-init
       nh
       gh
+      # TODO: allow unfree
+      # vscode
 
       # gui apps
+      # TODO: allow unfree
       # spotify
       pcmanfm
       ffmpegthumbnailer # video thumbnails

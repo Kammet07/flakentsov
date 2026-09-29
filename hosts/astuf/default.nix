@@ -13,6 +13,8 @@
 
   networking.hostName = "kammet-nixos-tuf";
 
+  console.keyMap = "colemak";
+
   users.users.kammet = {
     isNormalUser = true;
     useDefaultShell = true;
