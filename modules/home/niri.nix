@@ -1,9 +1,9 @@
 { pkgs, ... }: {
   programs.niri.settings = {
 
-      # spawn-at-startup = [
-      #   "noctalia"
-      # ];
+#    spawn-at-startup = [
+#      "noctalia"
+#    ];
 
     input = {
       keyboard = {
@@ -29,8 +29,7 @@
       "Mod+Return" = {
         hotkey-overlay.title = "Open a Terminal: footclient";
         action.spawn = [
-          "footclient"
-          "--no-wait"
+          "foot"
         ];
       };
 
@@ -44,8 +43,8 @@
         action.quit = [ ];
       };
 
-      "Mod+T" = {
-        action.spawn-sh = "noctalia ipc call launcher toggle";
+      "Mod+S" = {
+        action.spawn-sh = "noctalia msg panel-toggle launcher";
       };
 
       "Ctrl+Alt+A" = {

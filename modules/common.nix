@@ -3,7 +3,6 @@
 
 
 
-  # TODO: put some programms here
   environment.systemPackages = with pkgs; [
     firefox
     discord
