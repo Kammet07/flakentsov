@@ -15,6 +15,7 @@
         tap = true;
         accel-speed = 0.0;
         accel-profile = "adaptive";
+        natural-scroll = false;
       };
       
       focus-follows-mouse = {

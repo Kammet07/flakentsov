@@ -16,6 +16,7 @@
     usbutils
     # dig
     tree
+    tldr
     # rsync
     # jq
     # efibootmgr
