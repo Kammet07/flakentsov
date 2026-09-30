@@ -22,7 +22,39 @@
         enable = true;
         max-scroll-amount = "0%";
       };
+
+      mouse.accel-profile = "flat";
+
     };
+
+    cursor.size = 12;
+
+    outputs = {
+      "eDP-1" = {
+        mode = {
+          width = 2560;
+          height = 1600;
+        };
+        scale = 1.5;
+        position = { 
+          x = 0; 
+          y = 0; 
+        };
+      };
+      "ASUSTek COMPUTER INC ASUS VG34V N7LMTF092580" = {
+        mode = {
+          width = 3440;
+          height = 1440;
+        };
+
+        scale = 1.0;
+        position = { 
+          x = 1707; 
+          y = 0; 
+        };
+      };
+    };
+
 
     binds = {
       
