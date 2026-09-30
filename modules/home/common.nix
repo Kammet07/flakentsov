@@ -12,6 +12,7 @@
 
       # gui apps
       spotify
+      vesktop
       pcmanfm
       ffmpegthumbnailer # video thumbnails
       gimp
