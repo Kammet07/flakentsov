@@ -5,6 +5,7 @@
     ./networking.nix
     ./systemd-boot.nix
     ./common.nix
+    ./sound.nix
 
     ./home
   ];
