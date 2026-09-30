@@ -6,6 +6,7 @@
     ./systemd-boot.nix
     ./common.nix
     ./sound.nix
+    ./bluetooth.nix
 
     ./home
   ];
