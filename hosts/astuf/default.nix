@@ -15,6 +15,17 @@
 
   console.keyMap = "colemak";
 
+  # fix copilot button
+  services.keyd = {
+    enable = true;
+    keyboards.default = {
+      ids = [ "*" ];
+      settings.main = {
+        "leftmeta+leftshift+f23" = "rightcontrol";
+      };
+    };
+  };
+
   users.users.kammet = {
     isNormalUser = true;
     useDefaultShell = true;
